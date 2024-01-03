@@ -1,4 +1,6 @@
 ﻿using BepInEx.Logging;
+using Il2CppSystem.Reflection;
+using UnityEngine;
 
 namespace GovernmentLockdown;
 
@@ -26,5 +28,31 @@ public static class Utilities
         }
         
         GovernmentLockdownPlugin.Log.Log(level, message);
+    }
+    
+    public static MunicipalComputerType GetMunicipalComputerType(CruncherAppContent app)
+    {
+        NewNode node = app?.controller?.ic?.interactable?.node;
+        AddressPreset addressPreset = node?.gameLocation?.thisAsAddress?.addressPreset;
+        RoomConfiguration roomPreset = node?.room?.preset;
+        
+        if (node == null || addressPreset == null || roomPreset == null)
+        {
+            return MunicipalComputerType.NotMunicipal;
+        }
+
+        bool isSecure = roomPreset.escalationLevelNormal != 0;
+
+        switch (addressPreset.presetName)
+        {
+            case "CityHallLobby":
+                return isSecure ? MunicipalComputerType.LobbySecure : MunicipalComputerType.LobbyInsecure;
+            case "EnforcerOffice":
+                return isSecure ? MunicipalComputerType.EnforcersSecure : MunicipalComputerType.EnforcersInsecure;
+            case "HospitalWard":
+                return isSecure ? MunicipalComputerType.HospitalSecure : MunicipalComputerType.HospitalInsecure;
+        }
+
+        return MunicipalComputerType.NotMunicipal;
     }
 }
