@@ -1,5 +1,4 @@
 ﻿using BepInEx;
-using HarmonyLib;
 using SOD.Common.BepInEx;
 
 namespace GovernmentLockdown;
@@ -11,8 +10,7 @@ public class GovernmentLockdownPlugin : PluginController<GovernmentLockdownPlugi
     {
         Utilities.Log($"Plugin {MyPluginInfo.PLUGIN_GUID} is loaded!");
         
-        Harmony harmony = new Harmony($"{MyPluginInfo.PLUGIN_GUID}");
-        harmony.PatchAll();
+        Harmony.PatchAll();
         
         Utilities.Log($"Plugin {MyPluginInfo.PLUGIN_GUID} is patched!");
         
