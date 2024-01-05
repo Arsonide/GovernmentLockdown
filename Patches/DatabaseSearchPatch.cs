@@ -1,7 +1,5 @@
-﻿using System;
-using Il2CppSystem.Collections.Generic;
+﻿using Il2CppSystem.Collections.Generic;
 using HarmonyLib;
-using UnityEngine;
 
 namespace GovernmentLockdown;
 
