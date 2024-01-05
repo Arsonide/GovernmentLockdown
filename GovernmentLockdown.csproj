@@ -31,6 +31,9 @@
     <Reference Include="Il2Cppmscorlib">
       <HintPath>lib\Il2Cppmscorlib.dll</HintPath>
     </Reference>
+    <Reference Include="PrintBugfix">
+      <HintPath>lib\PrintBugfix.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.TextMeshPro">
       <HintPath>lib\Unity.TextMeshPro.dll</HintPath>
     </Reference>

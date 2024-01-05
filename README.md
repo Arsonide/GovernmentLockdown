@@ -17,7 +17,7 @@ Follow these steps:
 1. Download BepInEx from the official repository.
 2. Extract the downloaded files into the same folder as the "Shadows of Doubt.exe" executable.
 3. Launch the game, load the main menu, and then exit the game.
-4. Download the latest version of the plugin from the Releases page. Unzip the files and place them in corresponding directories within "Shadows of Doubt\BepInEx...". Also, download the [SOD.Common](https://thunderstore.io/c/shadows-of-doubt/p/Venomaus/SODCommon/) dependency.
+4. Download the latest version of the plugin from the Releases page. Unzip the files and place them in corresponding directories within "Shadows of Doubt\BepInEx...". Also, download the [SOD.Common](https://thunderstore.io/c/shadows-of-doubt/p/Venomaus/SODCommon/) and [PrintBugFix](https://thunderstore.io/c/shadows-of-doubt/p/TeamSpyraxi/PrintBugfix/) dependencies.
 5. Start the game.
 
 ## Usage and features
@@ -33,6 +33,7 @@ There are no configuration settings at this time.
 * Hospital crunchers now contain medical databases that print birth certificates, not government files on citizens.
 * When searching any database, before you needed two characters, but "space" also counted as one, which let people search for " B" and find every citizen with a last name starting with B. It is now required when searching that there be two non-whitespace characters. The intention of this change is to prevent these kinds of brute force searches. Ideally the player goes to the database to confirm a specific suspect in mind.
 * The hope is that all of these changes are lightweight enough to not impact the game too much, but realistically weaken how powerful the government database is in the stock game.
+* This mod also depends on Spyraxi's Print Bugfix mod, which fixes an issue that makes printing documents fail quite often. It should install automatically alongside the mod.
 
 ## License
 
