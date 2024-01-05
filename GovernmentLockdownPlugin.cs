@@ -20,12 +20,12 @@ public class GovernmentLockdownPlugin : PluginController<GovernmentLockdownPlugi
         // ClassInjector.RegisterTypeInIl2Cpp<ClassName>();
         // Utilities.Log($"Plugin {MyPluginInfo.PLUGIN_GUID} has added custom types!");
         
-        PrintBugfix.Plugin.AffectedPresetNames.Add("BirthCertificate");
+        PrintBugfix.Plugin.RegisterAffectedPreset("BirthCertificate");
     }
 
     public override bool Unload()
     {
-        PrintBugfix.Plugin.AffectedPresetNames.Remove("BirthCertificate");
+        PrintBugfix.Plugin.UnregisterAffectedPreset("BirthCertificate");
         return base.Unload();
     }
 }
