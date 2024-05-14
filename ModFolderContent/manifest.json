@@ -1,0 +1,10 @@
+{
+  "name": "GovernmentLockdown",
+  "version_number": "0.8.2",
+  "website_url": "https://github.com/Arsonide/GovernmentLockdown",
+  "description": "A mod that makes the government database in Shadows of Doubt more secure.",
+  "author": "Arsonide",
+  "dependencies": [
+      "Venomaus-SODCommon-2.0.2"
+    ]
+}

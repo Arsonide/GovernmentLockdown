@@ -29,7 +29,7 @@ public class MunicipalDesktopFilterPatch
         
         for (int i = additionalApps.Count - 1; i >= 0; --i)
         {
-            CruncherAppPreset preset = additionalApps[i];
+            CruncherAppPreset preset = additionalApps._items[i];
             ReversedApps.Add(preset);
             
             switch (preset.presetName)
@@ -83,7 +83,7 @@ public class MunicipalDesktopFilterPatch
         // Restore the original apps in reverse.
         for (int i = ReversedApps.Count - 1; i >= 0; --i)
         {
-            additionalApps.Add(ReversedApps[i]);
+            additionalApps.Add(ReversedApps._items[i]);
         }
     }
 }
