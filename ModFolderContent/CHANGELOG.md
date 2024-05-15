@@ -1,5 +1,6 @@
 # CHANGELOG
 **0.8.2**
+- Added options to disable the removal of the security and surveillance apps from non-Enforcer city hall offices.
 - Remove dependency on Print Bug Fix mod now that the stock game fixed this bug.
 - Update all libraries to latest versions and recompile against the latest version of the game.
 

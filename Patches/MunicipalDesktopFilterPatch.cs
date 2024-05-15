@@ -35,8 +35,14 @@ public class MunicipalDesktopFilterPatch
             switch (preset.presetName)
             {
                 case "Surveillance":
+                    if (computerType != MunicipalComputerType.EnforcersSecure && GovernmentLockdownPlugin.RemoveUnsecureSurveillanceApp.Value)
+                    {
+                        additionalApps.RemoveAt(i);
+                    }
+
+                    break;
                 case "Security":
-                    if (computerType != MunicipalComputerType.EnforcersSecure)
+                    if (computerType != MunicipalComputerType.EnforcersSecure && GovernmentLockdownPlugin.RemoveUnsecureSecurityApp.Value)
                     {
                         additionalApps.RemoveAt(i);
                     }
