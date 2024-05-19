@@ -1,0 +1,76 @@
+{
+  "modName": "GovernmentLockdown",
+  "creatorName": "Arsonide",
+
+  "versions": [
+    {
+      "version": "0.8.2",
+      "changes": "- Added options to disable the removal of the security and surveillance apps from non-Enforcer city hall offices.\n- Remove dependency on Print Bug Fix mod now that the stock game fixed this bug.\n- Update all libraries to latest versions and recompile against the latest version of the game."
+    },
+    {
+      "version": "0.8.1",
+      "changes": "- Fix small issue with Birth Certificates not registering with the Print Bug Fix mod."
+    },
+    {
+      "version": "0.8.0",
+      "changes": "- Municipal databases moved into secure rooms.\n- Surveillance and Security moved into secure Enforcer rooms.\n- Hospital wards now have medical databases that print birth certificates.\n- When searching a database it now requires 2 non-whitespace characters, stifling \"brute force\" searches."
+    }
+  ],
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  "contentPath": "./Content",
+  "manifestPath": "./Content/manifest.json",
+  "changelogPath": "./Content/CHANGELOG.md",
+  "gitReadmePath": "../README.md",
+  "projectPath": "../GovernmentLockdown.csproj",
+  "releasePath": "./Releases",
+  "dllPath": "../bin/Debug/net6.0/GovernmentLockdown.dll",
+  "interopPath": "%AppData%/r2modmanPlus-local/ShadowsofDoubt/profiles/Default/BepInEx/interop",
+  "libraryPath": "../lib",
+
+  "operations": [
+    {
+      "file": "./Content/manifest.json",
+      "search": "\"version_number\"\\s*:\\s*\"([^\"]+)\"",
+      "replace": "\"version_number\": \"{version}\""
+    },
+    {
+      "file": "../GovernmentLockdown.csproj",
+      "search": "<Version>([^<]+)</Version>",
+      "replace": "<Version>{version}</Version>"
+    },
+    {
+      "file": "../GovernmentLockdown.csproj",
+      "search": "<PackageVersion>([^<]+)</PackageVersion>",
+      "replace": "<PackageVersion>{version}</PackageVersion>"
+    },
+    {
+      "file": "../GovernmentLockdown.csproj",
+      "search": "<AssemblyVersion>([^<]+)</AssemblyVersion>",
+      "replace": "<AssemblyVersion>{version}</AssemblyVersion>"
+    },
+    {
+      "file": "../GovernmentLockdown.csproj",
+      "search": "<FileVersion>([^<]+)</FileVersion>",
+      "replace": "<FileVersion>{version}</FileVersion>"
+    }
+  ]
+}
